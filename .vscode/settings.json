@@ -1,3 +1,11 @@
 {
-  "php.validate.executablePath": ""
+  "php.validate.executablePath": "",
+  "workbench.activityBar.iconClickBehavior": "focus",
+  "workbench.iconTheme": null,
+  "workbench.sideBar.location": "left",
+  "workbench.statusBar.visible": true,
+  "workbench.view.alwaysShowHeaderActions": true,
+  "breadcrumbs.filePath": "on",
+  "window.autoDetectColorScheme": true,
+  "php.suggest.basic": true
 }

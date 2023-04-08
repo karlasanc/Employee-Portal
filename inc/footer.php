@@ -1,23 +1,55 @@
-  <!--Website Footer-->
-  <footer class="container-fluid bg-dark text-center text-white p-2 g-col-6">
-    <p class="text-center">
-      <h5>Employee Portal Website</h5>
-    </p>
+<!--Website Footer-->
+<footer>
 
-    <aside class="container p-3">
-      <h3>Links</h3>
-      <a href="#">Privacy</a>
-      <a href="../pages/serverfileinfo.php">Website Configuration</a>
-      <a href="#">Terms of Service</a>
-    </aside>
-    <p class="text-center">
-      <small>
-        &copy; 2023 Karla Sanchez. All rights reserved.
-      </small>
-    </p>
-  </footer>
+	<div class="container-fluid bg-dark text-white text-center text-small">
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+		<hr>
+
+		<div class="row">
+			<!--Address Section-->
+			<address class="col-sm-6">
+				LOCATION<br>
+				1234 Main Street<br>
+				Somewhere, FL 34237
+			</address>
+
+			<!--Social Section-->
+			<article class="col-sm-6">
+				AROUND THE WEB<br>
+				<a href="#">
+					Facebook
+				</a>
+				<a href="#">
+					Twitter
+				</a>
+				<a href="#">
+					LinkedIn
+				</a>
+			</article>
+		</div>
+
+		<hr class="mx-0">
+
+		<div class="row">
+			<!--Copyright Section-->
+			<section class="container">
+				<ul class="list-inline">
+					&copy; 2023 Karla Sanchez <br>
+					<li class="list-inline-item"><a href="#">Privacy</a></li>
+					<li class="list-inline-item"><a href="#">Terms</a></li>
+				</ul>
+			</section>
+
+		</div>
+	</div>
+
+
+</footer>
+
+<!-- Bootstrap core JS-->
+<script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js">
+</script>
 
 </body>
+
 </html>
