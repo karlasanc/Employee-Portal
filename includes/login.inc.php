@@ -1,13 +1,13 @@
 <?php
 
-//check data received via form
+//check for incoming data 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-  // SANITIZE VARIABLES FOR SQL INJECTION
+  // sanitize variables for SQL injection
   $email = htmlspecialchars($_POST['email'], ENT_QUOTES, 'UTF-8');
   $password = htmlspecialchars($_POST['password'], ENT_QUOTES, 'UTF-8');
 
-  //load classes
+  //load login application classes
   include_once "../classes/dbh.class.php";
   include_once "../classes/login.class.php";
   include_once "../classes/loginctrl.class.php";
@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   //instantiate Login Controller Class
   $login = new LoginCtrl($email, $password);
 
-  //validate and sign up user
+  //validate data and query into database
   $login->loginUser();
 
 
