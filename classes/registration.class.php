@@ -1,9 +1,9 @@
 <?php //register form db connection script using extends dbh to connect to db class.
 
-class Registration extends Database
+class Registration extends Dbh
 {
 
-  protected function registerUser($email, $password, $firstName, $lastName, $address, $phone, $salary, $SSN)
+  protected function setUser($email, $password, $firstName, $lastName, $address, $phone, $salary, $SSN)
   {
 
     //create new stmt to run a prepared statement for security
@@ -18,7 +18,7 @@ class Registration extends Database
     //use php execute() function to execute. insert data that replaces quesiton marks. Since there are mulitopel items, they need to be entered as an array.
     if (!$stmt->execute(array($email, $password, $firstName, $lastName, $address, $phone, $salary, $SSN))) { ##if any errors
       $stmt = null; #close out / delete statmente
-      header("location: ../registration.php?error=insertstmtfailed"); ##send user back to the index page
+      header("location: ..registration.php?error=regsystem"); ##send user back to the index page
       exit(); ## exits script
     }
     $stmt = null; #close stmt
@@ -38,7 +38,7 @@ class Registration extends Database
     //use php execute() function to execute. insert data that replaces quesiton marks. Since there are mulitopel items, they need to be entered as an array.
     if (!$stmt->execute(array($email, $SSN))) { ##if any errors
       $stmt = null; #close out / delete statmente
-      header("location: ../registration.php?error=selectstmtfailed"); ##send user back to the index page
+      header("location: ..registration.php?error=regsystem"); ##send user back to the index page
       exit(); ## exits script
 
     }
@@ -50,5 +50,33 @@ class Registration extends Database
       $resultCheck = true;
     }
     return $resultCheck;
+  }
+
+  // retrives user id from database suing profiel id . ehcks to see if user already has a profile.
+  protected function getUserId($email)
+  {
+    //create a prepare stmt to interact with db
+    //use connect() frm DBH Class to connect ot db
+    $stmt = $this->connect()->prepare('SELECT userID FROM tblUser WHERE email = ?;');
+
+    //check if connection failed and run at same time
+    if (!$stmt->execute(array($email))) {
+      $stmt = null;
+      header('location: index.php?error=regsystem');
+      exit();
+    }
+
+    //check if we received any data
+    if ($stmt->rowCount() === 0) {
+      //no data found
+      $stmt = null;
+      header('location: index.php?error=useridnotfound');
+      exit();
+    }
+
+    //save data in assoc array for usage
+    $userID = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    return $userID;
   }
 }

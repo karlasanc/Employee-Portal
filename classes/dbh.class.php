@@ -1,15 +1,20 @@
 <?php
 // db class that connects to db
-class Database
+class Dbh
 {
 
   // Database Handler Class using PDO to connect to Database
   protected function connect()
   {
     try {
+      //database info to match as needed
       $dbuser = 'root';
       $dbpass = '';
-      $dbh = new PDO('mysql:host=localhost;dbname=empDB', $dbuser, $dbpass);
+      $dbname = 'EmployeePortal';
+      $dbhost = 'localhost';
+
+      //database conneciton string
+      $dbh = new PDO('mysql:host=' . $dbhost . ';dbname=' . $dbname, $dbuser, $dbpass);
 
       //returns db connection
       return $dbh;
@@ -17,9 +22,9 @@ class Database
 
     // if there is an error, it gets assinged to variable $e and sends error
     catch (PDOException $e) {
-      print "Error!: " . $e->getMessage() . "<br/>";
-      //kills conneciton
-      die();
+      echo "Error: " . $e->getMessage();
+      header("location: ../index.php?error=systemerror");
+      exit();
     }
   }
 }

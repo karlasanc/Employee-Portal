@@ -1,15 +1,15 @@
-<?php
-require_once 'header.php';
-?>
+<?php require_once 'header.php'; ?>
+
 <!--Registration Page Content-->
 <main class="container-lg list-group-horizontal-md">
+
   <!--Registration Page Header-->
   <header class="container-md list-group-item text-center">
     <h2 class="display-4 fw-bold m-2">Registration Page</h2>
     <p>Please fill out the registration form below for website access.</p>
-    <!--Temporary Error Handling-->
+
     <?php
-    // dynamic URL error check
+    // Registration Validation Check
     if (isset($_GET["error"])) {
       //echo "Empty Input!";
       if ($_GET["error"] == "emptyinput") {
@@ -31,6 +31,10 @@ require_once 'header.php';
       else if ($_GET["error"] == 'email') {
         echo "<span class='text-danger'>Invalid email entered!</span>";
       }
+      //echo "Invalid SSN!";
+      else if ($_GET['error'] == "ssn") {
+        echo "<span class='text-danger'>Invalid SSN!</span>";
+      }
       //echo "User exists!";
       else if ($_GET["error"] == 'userexists') {
         echo "<span class='text-danger'>User already exists!</span>";
@@ -47,23 +51,20 @@ require_once 'header.php';
       else if ($_GET["error"] == 'success') {
         echo "<span class='text-success'>You have successfully registered for access! </span>";
       }
-      //echo "Invalid SSN!";
-      if ($_GET['error'] == "ssn") {
-        echo "<span class='text-danger'>Invalid SSN!</span>";
-      }
     }
+
     ?>
   </header>
 
-  <section class="container-md">
-    <!--Registration Form Section-->
-    <form class="list-group-item" method="post" action="includes/registration.inc.php" novalidate>
+  <section class="container-lg">
+
+    <!--Registration Form Section submits user data via POST method -->
+    <form class="list-group-item" method="post" action="includes/registration.inc.php">
       <div class="card-group">
 
-        <!-- Left Card -->
-
-        <div class="card">
+        <div class="card border border-warning">
           <div class="card-body">
+
             <!--Employee Section-->
             <h5 class="card-title list-group-item">Employee Information</h5>
             <div class="row">
@@ -107,6 +108,7 @@ require_once 'header.php';
                 <input id="password" class="form-control form-control-sm" type="text" name="password" required>
 
               </p>
+
               <!--Password Confirm Required-->
               <p class="card-text col-sm-6">
                 <label for="password2" class="form-label list-group-item">Confirm Password: </label>
@@ -115,6 +117,7 @@ require_once 'header.php';
 
             </div>
             <div clas="row">
+
               <!--Password Rules-->
               <p class="card-subtitle col-sm-12 list-group-item text-muted text-center">
                 10 characters long<br>
@@ -128,16 +131,18 @@ require_once 'header.php';
 
 
         <!-- Right Card -->
-        <div class="card">
+        <div class="card border border-warning">
           <div class="card-body">
             <!--Contact Information Section-->
             <h5 class="card-title list-group-item">Contact Information</h5>
             <div class="row">
+
               <!--Phone Required-->
               <p class="card-text col-sm-6">
                 <label for="phone" class="form-label list-group-item">Phone: </label>
                 <input id="phone" class="form-control form-control-sm" type="tel" name="phone" required>
               </p>
+
               <!--Email Required-->
               <p class="card-text col-sm-6">
                 <label for="email" class="form-label list-group-item">Email: </label>
@@ -146,6 +151,7 @@ require_once 'header.php';
             </div>
 
             <div class="row">
+
               <!--Address Required-->
               <p class="card-text col-12">
                 <label for="address" class="form-label list-group-item">Address</label>
@@ -184,6 +190,13 @@ require_once 'header.php';
             <!-- Registration Button -->
             <div class="d-grid d-xxl-block list-group-item">
               <input class="btn btn-outline-dark" type="submit" name="registration" value="Submit">
+            </div>
+
+            <!--Login link -->
+            <div class="checkbox list-group-itemmb-3">
+              <label>
+                Have an account yet? <a href="login.php" class="link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"="login.php">Login Here</a>
+              </label>
             </div>
 
 

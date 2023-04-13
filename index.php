@@ -6,16 +6,27 @@
   <!--Hero Section-->
   <header class="text-center py-4">
     <h2 class="display-1">Employee Portal Website</h2>
-    <p>Designed by Karla Sanchez</p>
+    <hr class="m-0 mb-4">
+
   </header>
 
-  <hr class="m-0">
 
-  <section class="card text-center p-2" style="border:none;">
-    <div class="card-body">
 
-      <h5 class="card-title">About the Site</h5>
-      <p class="card-text">The Employee Portal Website is a shell website that may be used as an employee resource portal for a small to midsize company.</p>
+  <section class="card p-1" style="border:none; font-size: 26px;">
+    <div class="card-body text-center">
+
+      <!-- Main Menu Welcome Customization -->
+      <?php if (!isset($_SESSION['userID'])) : ?>
+        <h5 class="card-title">Welcome!</h5>
+        <br />
+        <p class="card-text">This webiste was designed by Karla Sanchez. It is a basic employee portal web application that can be modified to meet your company needs. Feel free to navigate to the top of the screen where you will find a navigational menu that will direct you to log into the website or register for access.</p>
+      <?php elseif (isset($_SESSION['userID'])) : ?>
+
+        <h5 class="card-title">Welcome Back - <?php echo $_SESSION['firstName'] . " " .  $_SESSION['lastName']; ?> ! </h5>
+        <br>
+        <p class="card-text">To discover your new website functionalities, navigate to the top of the menu to see the new navigational items avaiable in the menu options.</p>
+      <?php endif; ?>
+
     </div>
   </section>
 
