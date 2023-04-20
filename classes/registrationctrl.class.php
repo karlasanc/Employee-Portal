@@ -1,5 +1,5 @@
 <?php
-// class creation
+// Registration Application Class
 class RegistrationCtrl extends Registration #database connection
 {
   // initiate class properites

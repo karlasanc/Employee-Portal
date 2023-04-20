@@ -1,13 +1,16 @@
 # Employee-Portal
 Employee Portal Website
 - CST310 - Software Development Course - UAGC
+
 ## Purpose
 Design, develop, and publish a business website using modern publishing tools. The websites should meets customer requirements, have the ability to dynamically access a database system, and be secure and scalable when published.
+
 ## Tools
 - Programming Language: PHP, HTML5, CSS, Javascript
 - IDE: Visual Studio Code
 - Database: MySql
 - Frameworks: Bootstrap
+
 ## Features 
 ### User Features
 **Recipient**

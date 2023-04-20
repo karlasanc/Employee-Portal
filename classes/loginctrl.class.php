@@ -1,5 +1,5 @@
 <?php
-// class creation
+// Login Application Class
 class LoginCtrl extends Login #database connection
 {
   // initiate class properites

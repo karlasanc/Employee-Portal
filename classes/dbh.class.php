@@ -1,9 +1,8 @@
 <?php
-// db class that connects to db
+// db class that makes connection to db
 class Dbh
 {
-
-  // Database Handler Class using PDO to connect to Database
+  // method to connect to db
   protected function connect()
   {
     try {
@@ -20,7 +19,7 @@ class Dbh
       return $dbh;
     }
 
-    // if there is an error, it gets assinged to variable $e and sends error
+    // send error 
     catch (PDOException $e) {
       echo "Error: " . $e->getMessage();
       header("location: ../index.php?error=systemerror");

@@ -1,5 +1,5 @@
 <?php
-
+// Login Application DB Queries
 class Login extends Dbh
 {
 
@@ -23,7 +23,7 @@ class Login extends Dbh
       exit();
     }
 
-    //assign results to result in assoc
+    //assign query results to result assoc
     $results = $stmt->fetchAll();
 
     // check password

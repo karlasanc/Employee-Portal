@@ -1,27 +1,21 @@
-<?php //register form db connection script using extends dbh to connect to db class.
-
+<?php
+// Registration Application DB Queries
 class Registration extends Dbh
 {
-
+  // insert query
   protected function setUser($email, $password, $firstName, $lastName, $address, $phone, $salary, $SSN)
   {
-
-    //create new stmt to run a prepared statement for security
-    // reference to connect() method in db class to connect to db
-    // reference php prepare() function containing dbquery to prepare the stmt to run inside db
-    //use '?' as placeholders
-    // helsp prevent sql injection, separate data from sql stmt
+    // prepared statement with parameters
     $stmt = $this->connect()->prepare("INSERT INTO tblUser (email, password, firstName, lastName, address, phone, salary, SSN) VALUES (?, ?, ?, ?, ?, ?, ?, ?);");
 
 
-    // chekc if prepared statement will fail or success when trying to run it. 
-    //use php execute() function to execute. insert data that replaces quesiton marks. Since there are mulitopel items, they need to be entered as an array.
-    if (!$stmt->execute(array($email, $password, $firstName, $lastName, $address, $phone, $salary, $SSN))) { ##if any errors
-      $stmt = null; #close out / delete statmente
-      header("location: ..registration.php?error=regsystem"); ##send user back to the index page
-      exit(); ## exits script
+    // error check
+    if (!$stmt->execute(array($email, $password, $firstName, $lastName, $address, $phone, $salary, $SSN))) {
+      $stmt = null;
+      header("location: ..registration.php?error=regsystem"); 
+      exit();
     }
-    $stmt = null; #close stmt
+    $stmt = null;
   }
 
 
