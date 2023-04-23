@@ -1,6 +1,8 @@
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a name="readme-top"></a>
 
+# The Employee Portal System
+
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
@@ -17,14 +19,13 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="#">
-    <img src="https://user-images.githubusercontent.com/114943957/233761287-071e9e19-15ba-40a5-9195-feeca756c72d.jpeg" alt="Logo" width="80" height="80">
-  </a>
-  <h3 align="center">Employee Portal System</h3>
+  <span>
+    <img src="https://user-images.githubusercontent.com/114943957/233761875-849dacac-558d-46e9-967a-0175e1e73386.png" alt="Logo" width="300">
+  </span>
+  <h2 align="center">Employee Portal System</h2>
   <p align="center">
     <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
     ·
@@ -64,14 +65,7 @@
 
 ## About The Project
 
-This project is an Employee Portal System built using a dynamic website. The employee portal system interface is built using Bootstrap, HTML, and CSS. 
-
-![Employee Index Page Screen Shot][index-screenshot]
-
-**Database API**
-The Employee Portal System uses a database API (Application Programming Interface) in PHP to provide a secure and efficient way to interact with a MySql database. MySQL is an open-source, relational database management system written in C and C++. It will allows the system to execute SQL queries, handle database errors, and manage the database connection. 
-
-To access the 'EmpPortal' MySql database, the Employee Portal System uses PDO, a database API available in PHP. The application connects to the MySql database, checks for a connection and handles any errors that may have occurred before executing any queries. If no errors are found, the API will execute SQL queries using the appropriate API functions and process the results. The API closes the database connection when finished. 
+The Employee Portal website was created primarily with Visual Studio Code editor, Apache and MySQl servers, Linux and MacOS operating systems, Bootstrap, SQL, HTML, CSS, and PHP programming languages. The web application is a shell website that can be configured to the individual needs of an employer to display and provide information to their employees. The application is also setup to be scalable as the needs of the employer grow.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -88,6 +82,7 @@ Programming Languages:
 
 Programming Tools: 
 * Linux
+* MacOS
 * Apache
 * MySQL/MariaDB
 * phpMyAdmin
@@ -100,124 +95,141 @@ Browser Compatibility:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 ## Getting Started
-
-I utilize LAMP stack technologies to develop the Employee Portal System due to its open-source availability, maintainability, and community-wide support. The LAMP architecture consists of the following layers: 
-
-* Linux Operating System
-* Apache Web Server
-* MySQL Relational Database Management System
-* PHP scripting language
-
-The LAMP stack technologies work with each other to load both dynamic and static files to the user interface. The Apache web server and MySQL database run on the linux operating system and communicate with each other using PHP. The Apache server will receive incoming requests from the user's browser to either load static or dynamic content. If the request is for a static file, the Apache server will respond directing with the appropriate content. If the browser request dynamic content, the Apache server will transfer the request to the PHP component. The PHP component processes the applicaiton functions needed to generate the dynamic content which may include communicating with the MySQL database to store or retrieve data. The PHP component transfers the results to the Apache web server. The Apache web server sends the dynamic content back to the user's browser. 
-
-To get started, ensure you have the appropriate LAMP stack system configurations and database to begin utilizing the Employee Portal application.
 
 ### Prerequisites
 
-The LAMP stack technologies can be installed from the Apache and Friends website. Create a new database that will be used to save and manage user input once the application is running. Download the Employee Portal project folder to your local root folder to access the application locally. 
+The Employee Portal architecture consists of the following layers: 
+* Linux Operating System
+* Apache Web Server
+* MySQL Relational Database Management System
+* PHP
 
-### Installation
+To get started, XAMPP, an open-source LAMP stack server package that contains Apache, MySQL, and PHP will need to be installed from the Apache and Friends website. A new database will need to be created to store and manage user input once the application is running. Once the system has been configured and the servers are up and running, the Employee Portal project will need to be downloaded and stored in your local server folder under the "htdocs" folder inside the XAMPP directory.
 
-_To install the LAMP Stack architecture, navigating to https://www.apachefriends.org/index.html on your web browser and select your corresponding operating system. Install the XAMPP application based on your operating system requirements._ 
-<br/><br/><img width="500" alt="Screenshot 2023-04-23 at 3 35 31 PM" src="https://user-images.githubusercontent.com/114943957/233861144-d654ab97-f3dc-40f4-893d-28d5ad983992.png">
+### LAMP/XAMPP Installation
 
+1. Navigating to https://www.apachefriends.org/index.html on your web browser. 
+2. Select your corresponding operating system and install the XAMPP application based on your operating system requirements. 
+<br/><img width="400" alt="Apache&Friends" src="https://user-images.githubusercontent.com/114943957/233861144-d654ab97-f3dc-40f4-893d-28d5ad983992.png">
+3. Save the Employee Portal project folder in your XAMPP htdocs folder. This will serve as the root folder to your application locally. 
 
-_Configure the Apache Web Server and MySQL Database Server._
-1. Open the XAMPP application and select **Manage Servers**. <br/><img width="450" alt="XAMPP1" src="https://user-images.githubusercontent.com/114943957/233858476-378ea4e3-4783-496d-8b27-d733043f05fb.png">
-2. Select the **MySQL Database** and **Apache Web Server** from the list of servers on the left side and click on the **Start** button on the right side of the list. You may need to start each one individually, if so, ensure you start the Apache Web Server first.<br/><img width="450" alt="XAMPP2" src="https://user-images.githubusercontent.com/114943957/233858515-fe676750-71e7-45c3-9f47-8fb76f2f6d76.png">
-3. Your Apache web server and MySQL database setup is complete.<br/><img width="450" alt="XAMPP3" src="https://user-images.githubusercontent.com/114943957/233858663-e60cfe53-198d-4978-9d3a-90e2d3947526.png">
+### Web & Database Server Installation
 
+_Configure the Apache and MySQL Database Servers._
+1. Open the XAMPP application and select **Manage Servers**.<br/><img width="400" alt="XAMPP1" src="https://user-images.githubusercontent.com/114943957/233858476-378ea4e3-4783-496d-8b27-d733043f05fb.png">
+2. Select the **MySQL Database** and **Apache Web Server** from the list of servers on the left side and click on the **Start** button on the right side of the list. You may need to start each one individually, if so, ensure you start the Apache Web Server first.<br/><img width="400" alt="XAMPP2" src="https://user-images.githubusercontent.com/114943957/233858515-fe676750-71e7-45c3-9f47-8fb76f2f6d76.png">
+3. Your Apache web server and MySQL database setup is complete.<br/><img width="400" alt="XAMPP3" src="https://user-images.githubusercontent.com/114943957/233858663-e60cfe53-198d-4978-9d3a-90e2d3947526.png">
 
-_Configure your own MySql Database to correspond with the Employee Portal System using PHPMyAdmin._
+### Employee Portal Database Setup
 
+_Configure the appropriate MySql Database using PHPMyAdmin._
 1. Ensure your servers are up and running, then avigate to http://localhost/phpmyadmin/ and log in. First time users will use 'root' as the username and leave password field empty. You may configure your own username and password for better security upon signing in.
-2. Create a new database schema. The one used for this system was named "EmployeePortal". <img width="878" alt="empdb_script" src="https://user-images.githubusercontent.com/114943957/233858236-223572cb-8bcf-4a34-b5cd-3a7675e0d696.png">
-4. Create a table with the corresponding registration form fields. <img width="587" alt="empdb_script2" src="https://user-images.githubusercontent.com/114943957/233858245-4be791e4-77ca-4731-9d52-bba2ea7ea71f.png">
- 
-
-
-4. 
-5. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+2. Select SQL from the main page navigation menu to begin create your database. <br><img width="400" alt="empdb_script1" src="https://user-images.githubusercontent.com/114943957/233861651-e5d2a748-a7ae-460f-a5b3-639ced7a7aa5.png">
+3. Create a new database schema, the one used for this application is called "EmployeePortal". <br/><img width="450" alt="empdb_script2" src="https://user-images.githubusercontent.com/114943957/233858236-223572cb-8bcf-4a34-b5cd-3a7675e0d696.png">
+4. Create a new table that corresponds with each field in the registration form. <br/><img width="350" alt="empdb_script3" src="https://user-images.githubusercontent.com/114943957/233858245-4be791e4-77ca-4731-9d52-bba2ea7ea71f.png">
+5. Your database schema and table can be accessed on the left panel. <br/><img width="200" alt="empdb_script4" src="https://user-images.githubusercontent.com/114943957/233862043-ce88953a-8086-41ba-b071-e04b8a1b4123.png">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
-
-
-
-
-Additionally, you will also need to create a MySql database using PHPMyAdmin to save user input form the Employee Porta system. PHPMyAdmin is an open-source web-based administration tool for managing MySQL and MariaDB databases. It is an easy-to-use graphical interface used to performing various database administration tasks, such as creating, modifying, and deleting databases, tables, columns, and rows. Once your XAMPP application has been configured, complete the following steps:
-
-
-2. First time users log in using 'root' as the username and leave password field empty. You may configure your own username and password for better security upon signing in.
-3. Create a new database schema. The one used for this system was named "EmployeePortal". <img width="878" alt="empdb_script" src="https://user-images.githubusercontent.com/114943957/233858236-223572cb-8bcf-4a34-b5cd-3a7675e0d696.png">
-4. Create a table with the corresponding registration form fields. <img width="587" alt="empdb_script2" src="https://user-images.githubusercontent.com/114943957/233858245-4be791e4-77ca-4731-9d52-bba2ea7ea71f.png">
- 
-
-
-
-Save the Employee Portal project folder in the "htdocs" folder of XAMPP. 
-
-Start the XAMPP control panel and start the Apache and MySQL services. 
-<img width="683" alt="Screenshot 2023-04-22 at 12 37 50 PM" src="https://user-images.githubusercontent.com/114943957/233796272-1b820443-ad8b-4c1c-9c1e-456ac3bc3897.png">
-
-To run the application, type "http://localhost/index.php" in the address bar. This will execute the PHP code in the "index.php" file and display the interface on the web page. 
-
-Download and install XAMPP from Apache Friends website and configure it to run Apache and MySQL. 
-
-To use the Employee Portal System, run the PHP files in XAMPP: 
-1. Install and configure XAMPP on your system
-
-
-
-
-
-the PHP files
-
-
-Before getting started, ensure you have the required MySQL software installed on your local machine to create a database to correspond to the Employee Portal System. 
-
-
-System Requirements to ensure your computer will comply (has the required hard disk space, DRAM, OS, 
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-
-
-
-
-
-, configure the Apache Web Server and MySQL database. and Apache save the Employee Portal project folder will all files to your XAMPP **htdocs** subdirectory folder. Follow the instrauctions my PHPMyDmin. You will need to install XAMPP from the Apache Friends website. Once the application has been installed, 
-
-
-After starting the MySqL and Apache servers using the XAMPP application manager, the application can be accessed through your local browser by navigating to "http://localhost/EmployeePortal/index.php" if the project folder was saved in the "htdocs" root directory. 
-
-
 <!-- USAGE EXAMPLES -->
 ## Usage
+
+The Employee Portal web application is created using the MVC model to handle a wide range of user interactions and data processing tasks to display dynamic and static content to its users. 
+
+The model layer typically responsible for handling 
+
+The root folder contains all  all the system applications, including the index, header, and footer files. The includes folder holds the PHP scripts that handle the data processing tasks for each applicaiton. The classes file holds all user data The index file is the system's landing page that starts up the application and contains the main navigation. The user can register or login to the site by using the main navigational buttons. 
+
+
+The website index file home page  includes the navigation menu, the website footer, and in the center is the page content, see Figure 1 and Figure 2. As the user clicks through the /Home, /Login, /Registration, and /Contact Us links, the website navigation bar and footer will remain the same, the main content for the individual pages will change. The navigation bar is collapsible and will respond to the device the user is navigating the website through. A user can access the registration, login, and profile page through the website navigation menu located at the top of all website pages.![image](https://user-images.githubusercontent.com/114943957/233872457-a3b56e0d-4706-4bc9-9b21-4ebb0054af25.png)
+
+
+
+
+
+The Linux operating system runs on the server and provides a stable and secure environment for hosting the website.
+
+The Apache web server software listens for incoming requests from clients and serves up web pages in response. Apache can handle multiple requests simultaneously and supports a wide range of file formats, including HTML, CSS, JavaScript, and PHP.
+
+MySQL is used as the database management system to store and organize the website's dynamic content. MySQL can handle complex data structures and queries, making it an ideal choice for websites that require frequent database interactions.
+
+PHP is the scripting language used to generate dynamic content on the website. PHP scripts can interact with MySQL to retrieve and manipulate data, and can generate HTML and other web content on-the-fly based on user input or other factors.
+
+
+
+Once the Employee Portal website is up and running, the user lands on the home page of the application which includes the website navigation bar at the top, the website footer at the bottom, and in the center is the page content, see Figure 1 and Figure 2. As the user clicks through the /Home, /Login, /Registration, and /Contact Us links, the website navigation bar and footer will remain the same, the main content for the individual pages will change. 
+
+The navigation bar is collapsible and will respond to the device the user is navigating the website through. 
+
+A user can access the registration, login, and profile page through the website navigation menu located at the top of all website pages.
+
+The technologies work with each other to load both dynamic and static files to the user interface. The Apache web server and MySQL database server run on the linux operating system and communicate with each other using the PHP programming language. The Apache server receives incoming requests from the user's browser to load static or dynamic content. If the request is for a static file, the Apache server will respond directing to the browser with the appropriate content. If the browser request dynamic content, the Apache server will transfer the request to the PHP compiler. The PHP compiler processes the requests by completing the PHP script for the specific applicaiton which may include communicating with the MySQL database server to store or retrieve data within a database. The PHP compiler transfers the results to the Apache web server. The Apache web server sends the dynamic content back to the user's browser. 
+
+
+
+
+
+The Employee Portal System uses a database API (Application Programming Interface) to provide a secure and efficient way to interact with a MySql database. MySQL comm to execute SQL queries, handle database errors, and manage the database connection. 
+
+To access the 'EmpPortal' MySql database, the Employee Portal System uses PDO, a database API available in PHP. The application connects to the MySql database, checks for a connection and handles any errors that may have occurred before executing any queries. If no errors are found, the API will execute SQL queries using the appropriate API functions and process the results. The API closes the database connection when finished. 
+
+
+
+## Purpose
+This project was meant to design and create a real-world web application that meets customers’ requirements and dynamically access a MySql database. The web application applies PHP sequential, selection, and repetition control structures. 
+
+
+
+
+## Features 
+### User Features
+**Recipient**
+- receive newsletter via email every morning
+- random inspirational quote
+- weather forecast
+- twitter trends
+- random fact
+**Admin**
+- add/removes new employees to the website
+- view employee information
+## Functional Requirements
+### Application
+- generate a random insipirational quote
+- retrieve current weather forecast for specified location
+- retrieve current twitter trends
+- retreive a random Wikipedia article
+- format content into an email
+- send email to specified recipient
+### Admin
+- configure which content to include in email
+- add recipients
+- remove recipients
+- schedule reoccuring daily time to send email
+- configure sender credentials
+## Non-Functional Requirements
+- configure using admin GUI
+- extensible to add more content types
+- resilient to content errors
+# Acknowledgements
+- source 1
+- source 2
+- source 3
+
+
+
+
+
+
+
+
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- ROADMAP -->
@@ -323,59 +335,4 @@ Learn more about LAMP STACK functionalities here: https://aws.amazon.com/what-is
 [VSCode.com]: https://img.shields.io/badge/VisualStudioCode-IDE-blue
 ?logo=data:image/png;base64,…
 [VSCode-url]: https://code.visualstudio.com/
-
-
-
-
-
-
-
-
-# Employee-Portal
-The Employee Portal website was created using Visual Studio Code, Bootstrap framework, HTML/CSS, and PHP programming languages. It is a basic website application that can be used by an Employer to display and provide employee information to their employees. The Employee Portal website created can be configured and customize to a future potential user, however, there are certain configurations that must be completed first.
-
-## Purpose
-This project was meant to design and create a real-world web application that meets customers’ requirements and dynamically access a MySql database. The web application applies PHP sequential, selection, and repetition control structures. 
-
-## Tools
-- Programming Language: PHP, HTML5, CSS, Javascript
-- IDE: Visual Studio Code
-- Relational Database: MySql
-- Frameworks: Bootstrap5
-
-## Features 
-### User Features
-**Recipient**
-- receive newsletter via email every morning
-- random inspirational quote
-- weather forecast
-- twitter trends
-- random fact
-**Admin**
-- add/removes new employees to the website
-- view employee information
-## Functional Requirements
-### Application
-- generate a random insipirational quote
-- retrieve current weather forecast for specified location
-- retrieve current twitter trends
-- retreive a random Wikipedia article
-- format content into an email
-- send email to specified recipient
-### Admin
-- configure which content to include in email
-- add recipients
-- remove recipients
-- schedule reoccuring daily time to send email
-- configure sender credentials
-## Non-Functional Requirements
-- configure using admin GUI
-- extensible to add more content types
-- resilient to content errors
-# Acknowledgements
-- source 1
-- source 2
-- source 3
-
-<!-- Include all other revelant website, or resources, used to research project details -->
 
