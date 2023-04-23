@@ -24,9 +24,7 @@
   <a href="#">
     <img src="https://user-images.githubusercontent.com/114943957/233761287-071e9e19-15ba-40a5-9195-feeca756c72d.jpeg" alt="Logo" width="80" height="80">
   </a>
-
-  <h3 align="center">Employee Portal API</h3>
-
+  <h3 align="center">Employee Portal System</h3>
   <p align="center">
     <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
     ·
@@ -35,7 +33,6 @@
     <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
   </p>
 </div>
-
 
 
 <!-- TABLE OF CONTENTS -->
@@ -67,9 +64,9 @@
 
 ## About The Project
 
-![Employee Index Page Screen Shot][index-screenshot]
-
 This project is an Employee Portal System built using a dynamic website. The employee portal system interface is built using Bootstrap, HTML, and CSS. 
+
+![Employee Index Page Screen Shot][index-screenshot]
 
 **Database API**
 The Employee Portal System uses a database API (Application Programming Interface) in PHP to provide a secure and efficient way to interact with a MySql database. MySQL is an open-source, relational database management system written in C and C++. It will allows the system to execute SQL queries, handle database errors, and manage the database connection. 
@@ -82,17 +79,17 @@ To access the 'EmpPortal' MySql database, the Employee Portal System uses PDO, a
 
 ### Built With
 
-The Employee Portal Applicaiton is created using the following:
-
-Languages: 
+Programming Languages: 
 * PHP
 * SQL
 * Bootstrap
 * HTML
 * CSS
 
-Tools: 
-* MySQL
+Programming Tools: 
+* Linux
+* Apache
+* MySQL/MariaDB
 * phpMyAdmin
 * Visual Studio Code IDE
 
@@ -105,14 +102,72 @@ Browser Compatibility:
 
 
 
-<!-- GETTING STARTED -->
 ## Getting Started
 
-To run the Employee Portal application on your local computer, ensure you have the correct software configuration on your system. You will need to install XAMPP from the Apache Friends website and configure it to run Apachee and MySql. Save the Employee Portal project folder in the XAMPP "htdocs" subdirectory folder. After starting the MySqL and Apache servers using the XAMPP application manager, the application can be accessed through your local browser by navigating to "http://localhost/EmployeePortal/index.php" if the project folder was saved in the "htdocs" root directory. 
+I utilize LAMP stack technologies to develop the Employee Portal System due to its open-source availability, maintainability, and community-wide support. The LAMP architecture consists of the following layers: 
 
-Additionally, you will also need to create a MySql database to save the employee data you input into your application. To create a compatible database, complete the following steps after configuring your XAMPP application: 
+* Linux Operating System
+* Apache Web Server
+* MySQL Relational Database Management System
+* PHP scripting language
 
-1. Navigate to http://localhost/phpmyadmin/ to access 
+The LAMP stack technologies work with each other to load both dynamic and static files to the user interface. The Apache web server and MySQL database run on the linux operating system and communicate with each other using PHP. The Apache server will receive incoming requests from the user's browser to either load static or dynamic content. If the request is for a static file, the Apache server will respond directing with the appropriate content. If the browser request dynamic content, the Apache server will transfer the request to the PHP component. The PHP component processes the applicaiton functions needed to generate the dynamic content which may include communicating with the MySQL database to store or retrieve data. The PHP component transfers the results to the Apache web server. The Apache web server sends the dynamic content back to the user's browser. 
+
+To get started, ensure you have the appropriate LAMP stack system configurations and database to begin utilizing the Employee Portal application.
+
+### Prerequisites
+
+The LAMP stack technologies can be installed from the Apache and Friends website. Create a new database that will be used to save and manage user input once the application is running. Download the Employee Portal project folder to your local root folder to access the application locally. 
+
+### Installation
+
+_To install the LAMP Stack architecture, navigating to https://www.apachefriends.org/index.html on your web browser and select your corresponding operating system. Install the XAMPP application based on your operating system requirements._ 
+<br/><br/><img width="500" alt="Screenshot 2023-04-23 at 3 35 31 PM" src="https://user-images.githubusercontent.com/114943957/233861144-d654ab97-f3dc-40f4-893d-28d5ad983992.png">
+
+
+_Configure the Apache Web Server and MySQL Database Server._
+1. Open the XAMPP application and select **Manage Servers**. <br/><img width="450" alt="XAMPP1" src="https://user-images.githubusercontent.com/114943957/233858476-378ea4e3-4783-496d-8b27-d733043f05fb.png">
+2. Select the **MySQL Database** and **Apache Web Server** from the list of servers on the left side and click on the **Start** button on the right side of the list. You may need to start each one individually, if so, ensure you start the Apache Web Server first.<br/><img width="450" alt="XAMPP2" src="https://user-images.githubusercontent.com/114943957/233858515-fe676750-71e7-45c3-9f47-8fb76f2f6d76.png">
+3. Your Apache web server and MySQL database setup is complete.<br/><img width="450" alt="XAMPP3" src="https://user-images.githubusercontent.com/114943957/233858663-e60cfe53-198d-4978-9d3a-90e2d3947526.png">
+
+
+_Configure your own MySql Database to correspond with the Employee Portal System using PHPMyAdmin._
+
+1. Ensure your servers are up and running, then avigate to http://localhost/phpmyadmin/ and log in. First time users will use 'root' as the username and leave password field empty. You may configure your own username and password for better security upon signing in.
+2. Create a new database schema. The one used for this system was named "EmployeePortal". <img width="878" alt="empdb_script" src="https://user-images.githubusercontent.com/114943957/233858236-223572cb-8bcf-4a34-b5cd-3a7675e0d696.png">
+4. Create a table with the corresponding registration form fields. <img width="587" alt="empdb_script2" src="https://user-images.githubusercontent.com/114943957/233858245-4be791e4-77ca-4731-9d52-bba2ea7ea71f.png">
+ 
+
+
+4. 
+5. Clone the repo
+   ```sh
+   git clone https://github.com/your_username_/Project-Name.git
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. Enter your API in `config.js`
+   ```js
+   const API_KEY = 'ENTER YOUR API';
+   ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+
+
+
+
+Additionally, you will also need to create a MySql database using PHPMyAdmin to save user input form the Employee Porta system. PHPMyAdmin is an open-source web-based administration tool for managing MySQL and MariaDB databases. It is an easy-to-use graphical interface used to performing various database administration tasks, such as creating, modifying, and deleting databases, tables, columns, and rows. Once your XAMPP application has been configured, complete the following steps:
+
+
+2. First time users log in using 'root' as the username and leave password field empty. You may configure your own username and password for better security upon signing in.
+3. Create a new database schema. The one used for this system was named "EmployeePortal". <img width="878" alt="empdb_script" src="https://user-images.githubusercontent.com/114943957/233858236-223572cb-8bcf-4a34-b5cd-3a7675e0d696.png">
+4. Create a table with the corresponding registration form fields. <img width="587" alt="empdb_script2" src="https://user-images.githubusercontent.com/114943957/233858245-4be791e4-77ca-4731-9d52-bba2ea7ea71f.png">
+ 
 
 
 
@@ -143,34 +198,15 @@ System Requirements to ensure your computer will comply (has the required hard d
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
 
-### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+, configure the Apache Web Server and MySQL database. and Apache save the Employee Portal project folder will all files to your XAMPP **htdocs** subdirectory folder. Follow the instrauctions my PHPMyDmin. You will need to install XAMPP from the Apache Friends website. Once the application has been installed, 
 
+
+After starting the MySqL and Apache servers using the XAMPP application manager, the application can be accessed through your local browser by navigating to "http://localhost/EmployeePortal/index.php" if the project folder was saved in the "htdocs" root directory. 
 
 
 <!-- USAGE EXAMPLES -->
@@ -252,6 +288,9 @@ Use this space to list resources you find helpful and would like to give credit 
 * [GitHub Pages](https://pages.github.com)
 * [Font Awesome](https://fontawesome.com)
 * [React Icons](https://react-icons.github.io/react-icons/search)
+
+
+Learn more about LAMP STACK functionalities here: https://aws.amazon.com/what-is/lamp-stack/#:~:text=A%20LAMP%20stack%20is%20a,and%20the%20programming%20language%2C%20PHP.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
